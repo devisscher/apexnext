@@ -31,7 +31,7 @@ const Hero = () => {
         <HeroOneButton
           title={
             <>
-              {'Équipe cycliste\n'}
+              {'Club cycliste\n'}
               <span className="text-primary-500">Présenter par</span>
             </>
           }
