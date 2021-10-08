@@ -32,6 +32,7 @@ const Hero = () => {
           title={
             <>
               <img
+                className="mb-20"
                 style={{ height: '150px' }}
                 src={`${router.basePath}/assets/images/logo-apex.svg`}
                 alt="Eurosports"
