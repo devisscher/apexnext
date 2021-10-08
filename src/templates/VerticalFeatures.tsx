@@ -1,31 +1,45 @@
-import { VerticalFeatureRow } from '../feature/VerticalFeatureRow';
+import React from 'react';
+
+import { useRouter } from 'next/router';
+
+import { HorizontalFeatureColumn } from '../feature/HorizontalFeatureColumn';
 import { Section } from '../layout/Section';
 
-const VerticalFeatures = () => (
-  <Section
-    title="Your title here"
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at."
-  >
-    <VerticalFeatureRow
-      title="Your title here"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-      image="/assets/images/feature.svg"
-      imageAlt="First feature alt text"
-    />
-    <VerticalFeatureRow
-      title="Your title here"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-      image="/assets/images/feature2.svg"
-      imageAlt="Second feature alt text"
-      reverse
-    />
-    <VerticalFeatureRow
-      title="Your title here"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-      image="/assets/images/feature3.svg"
-      imageAlt="Third feature alt text"
-    />
-  </Section>
-);
+const VerticalFeatures = () => {
+  const router = useRouter();
+  return (
+    <>
+      <Section
+        title="À propos"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at."
+      />
+      <Section
+        title="Partenaires"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at."
+      >
+        <div className="grid grid-cols-3 gap-4">
+          <HorizontalFeatureColumn
+            title="Eurosports"
+            description=""
+            image={`${router.basePath}/assets/images/eurosports.svg`}
+            imageAlt="Logo Eurosport"
+          />
+          <HorizontalFeatureColumn
+            title="Flinks"
+            description=""
+            image={`${router.basePath}/assets/images/logo-flinks.svg`}
+            imageAlt="Logo Flinks"
+          />
+          <HorizontalFeatureColumn
+            title="Alinéa"
+            description=""
+            image={`${router.basePath}/assets/images/logo-alinea.svg`}
+            imageAlt="Logo Eurosport"
+          />
+        </div>
+      </Section>
+    </>
+  );
+};
 
 export { VerticalFeatures };

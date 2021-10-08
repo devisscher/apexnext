@@ -15,10 +15,11 @@ module.exports = {
       '5xl': '3rem',
       '6xl': '4rem',
     },
+
     extend: {
       colors: {
         primary: {
-          100: '#E6F6FE',
+          100: '#D73035',
           200: '#C0EAFC',
           300: '#9ADDFB',
           400: '#4FC3F7',

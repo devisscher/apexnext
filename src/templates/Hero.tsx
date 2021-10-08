@@ -31,8 +31,11 @@ const Hero = () => {
         <HeroOneButton
           title={
             <>
-              {'Club cycliste\n'}
-              <span className="text-primary-500">Présenter par</span>
+              <img
+                src={`${router.basePath}/assets/images/logo-apex.svg`}
+                alt="Eurosports"
+              />
+              <span className="text-primary-100">Présenter par</span>
             </>
           }
           button={
