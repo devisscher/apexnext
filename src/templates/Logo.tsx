@@ -21,7 +21,7 @@ const Logo = (props: ILogoProps) => {
       <div className="flex flex-col items-center justify-center">
         <img
           style={{ height: `${size}px` }}
-          src={`${router.basePath}/assets/images/badge-apex.svg`}
+          src={`${router.basePath}/assets/images/apex-logo-square.png`}
           alt={AppConfig.site_name}
         />
       </div>
