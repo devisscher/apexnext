@@ -32,6 +32,7 @@ const Hero = () => {
           title={
             <>
               <img
+                style={{ height: '150px' }}
                 src={`${router.basePath}/assets/images/logo-apex.svg`}
                 alt="Eurosports"
               />
@@ -42,6 +43,7 @@ const Hero = () => {
             <Link href="https://creativedesignsguru.com/category/nextjs/">
               <a>
                 <img
+                  style={{ height: '120px' }}
                   src={`${router.basePath}/assets/images/eurosports.svg`}
                   alt="Eurosports"
                 />
