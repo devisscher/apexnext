@@ -4,11 +4,12 @@ import { AppConfig } from '../utils/AppConfig';
 
 type ILogoProps = {
   xl?: boolean;
+  xs?: boolean;
 };
 
 const Logo = (props: ILogoProps) => {
   const router = useRouter();
-  // const size = props.xl ? '44' : '32';
+  const size = props.xl ? '150' : '32';
   const fontStyle = props.xl
     ? 'font-semibold text-3xl'
     : 'font-semibold text-xl';
@@ -19,7 +20,7 @@ const Logo = (props: ILogoProps) => {
     >
       <div className="flex flex-col items-center justify-center">
         <img
-          style={{ height: '250px' }}
+          style={{ height: `${size}px` }}
           src={`${router.basePath}/assets/images/badge-apex.svg`}
           alt={AppConfig.site_name}
         />

@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <Background color="bg-gray-100">
       <Section yPadding="py-6">
-        <NavbarTwoColumns logo={<Logo xl />}>
+        <NavbarTwoColumns logo={<Logo xs />}>
           <li>
             <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
               <a>À propos</a>
@@ -35,7 +35,7 @@ const Hero = () => {
                 src={`${router.basePath}/assets/images/logo-apex.svg`}
                 alt="Eurosports"
               />
-              <span className="text-primary-100">Présenter par</span>
+              <span className="text-primary-100">présenté par</span>
             </>
           }
           button={
