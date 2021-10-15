@@ -17,7 +17,7 @@ const VerticalFeatures = () => {
         title="Partenaires"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at."
       >
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-3">
           <HorizontalFeatureColumn
             title="Eurosports"
             description=""
