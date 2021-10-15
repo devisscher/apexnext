@@ -3,4 +3,7 @@ export const AppConfig = {
   title: 'Apex Outaouais',
   description: 'Club Cycliste',
   locale: 'fr',
+  strava: 'https://www.strava.com/clubs/726088',
+  instagram: 'https://www.instagram.com/apexoutaouais.cc/',
+  facebook: 'https://www.facebook.com/apexoutaouais.cc/',
 };
