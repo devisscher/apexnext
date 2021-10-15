@@ -5,8 +5,7 @@ const FooterCopyright = () => (
     © Copyright {new Date().getFullYear()} {AppConfig.title}. Made with{' '}
     <span role="img" aria-label="Love">
       ♥
-    </span>{' '}
-    by Thomas Devisscher 😏
+    </span>
     <style jsx>
       {`
         .footer-copyright :global(a) {
