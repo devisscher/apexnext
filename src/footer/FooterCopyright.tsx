@@ -2,7 +2,12 @@ import { AppConfig } from '../utils/AppConfig';
 
 const FooterCopyright = () => (
   <div className="footer-copyright">
-    © Copyright {new Date().getFullYear()} {AppConfig.title}.
+    © Copyright {new Date().getFullYear()} {AppConfig.title}. <br />
+    Contact{' '}
+    <span role="img" aria-label="Email" className="footer-enveloppe">
+      ✉
+    </span>
+    <a href="mailto:info@apexoutaouais.cc">info@apexoutaouais.cc</a>
     <style jsx>
       {`
         .footer-copyright :global(a) {
@@ -11,6 +16,9 @@ const FooterCopyright = () => (
 
         .footer-copyright :global(a:hover) {
           @apply underline;
+        }
+        .footer-enveloppe {
+          margin: 0 8px 0 0;
         }
       `}
     </style>
