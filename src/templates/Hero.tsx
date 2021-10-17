@@ -11,49 +11,68 @@ const Hero = () => {
   const router = useRouter();
 
   return (
-    <Background color="bg-gray-100">
-      <Section yPadding="py-6">
-        <NavbarTwoColumns logo={<Logo xs />}>
-          <li>
-            <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
-              <a>À propos</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <a>Calendrier</a>
-            </Link>
-          </li>
-        </NavbarTwoColumns>
-      </Section>
+    <>
+      <Background color="bg-gray-100">
+        <Section yPadding="py-6">
+          <NavbarTwoColumns logo={<Logo xs />}>
+            <li>
+              <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
+                <a>À propos</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                <a>Calendrier</a>
+              </Link>
+            </li>
+          </NavbarTwoColumns>
+        </Section>
 
-      <Section yPadding="pt-20 pb-32">
-        <HeroOneButton
-          title={
-            <>
-              <img
-                className="mb-20"
-                style={{ height: '100px' }}
-                src={`${router.basePath}/assets/images/logo-apex.svg`}
-                alt="Eurosports"
-              />
-              <span className="text-primary-100">présenté par</span>
-            </>
-          }
-          button={
-            <Link href="https://creativedesignsguru.com/category/nextjs/">
-              <a>
+        <Section yPadding="pt-20 pb-32">
+          <HeroOneButton
+            title={
+              <>
                 <img
-                  style={{ height: '90px' }}
-                  src={`${router.basePath}/assets/images/eurosports.svg`}
+                  className="primary"
+                  src={`${router.basePath}/assets/images/logo-apex.svg`}
                   alt="Eurosports"
                 />
-              </a>
-            </Link>
+                <h6 className="text-primary-100">présenté par</h6>
+              </>
+            }
+            button={
+              <img
+                className="secondary"
+                src={`${router.basePath}/assets/images/eurosports.svg`}
+                alt="Eurosports"
+              />
+            }
+          />
+        </Section>
+      </Background>
+      <style jsx>
+        {`
+          @media screen and (max-width: 600px) {
+            .primary {
+              height: 60px;
+              margin: auto;
+            }
           }
-        />
-      </Section>
-    </Background>
+          .primary {
+            height: 100px;
+            margin: auto;
+          }
+          @media screen and (max-width: 600px) {
+            .secondary {
+              height: 50px;
+            }
+          }
+          .secondary {
+            height: 90px;
+          }
+        `}
+      </style>
+    </>
   );
 };
 
