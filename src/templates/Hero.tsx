@@ -52,16 +52,17 @@ const Hero = () => {
       </Background>
       <style jsx>
         {`
+          img.primary {
+            height: 90px;
+            margin: auto;
+          }
           @media screen and (max-width: 600px) {
-            .primary {
+            img.primary {
               height: 60px;
               margin: auto;
             }
           }
-          .primary {
-            height: 100px;
-            margin: auto;
-          }
+
           @media screen and (max-width: 600px) {
             .secondary {
               height: 50px;
