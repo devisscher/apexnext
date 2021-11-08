@@ -25,8 +25,8 @@ const Hero = (props: Props) => {
               </Link>
             </li>
             <li>
-              <Link href="/">
-                <a>Calendrier</a>
+              <Link href="/boutique">
+                <a>Boutique</a>
               </Link>
             </li>
           </NavbarTwoColumns>
