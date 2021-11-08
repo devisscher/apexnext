@@ -13,10 +13,9 @@ type IVerticalFeatureRowProps = {
 const HorizontalFeatureColumn = (props: IVerticalFeatureRowProps) => {
   const horizontalFeatureClass = className(
     'mt-20',
-    'flex',
     'row',
     'flex-wrap',
-    'items-center',
+    'items-start',
     {
       'flex-row-reverse': props.reverse,
     }
@@ -28,10 +27,21 @@ const HorizontalFeatureColumn = (props: IVerticalFeatureRowProps) => {
     <div className={horizontalFeatureClass}>
       <div className="w-full p-6">
         <a href={props.link}>
-          <img src={`${router.basePath}${props.image}`} alt={props.imageAlt} />
+          <div
+            style={{
+              backgroundImage: `url(${router.basePath}${props.image})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+              height: '200px',
+            }}
+          />
+
+          {/* <img src={`${router.basePath}${props.image}`} alt={props.imageAlt} /> */}
         </a>
       </div>
-      <div className="">{props.description}</div>
+      <div style={{ marginTop: '10px', textAlign: 'center' }}>
+        {props.description}
+      </div>
     </div>
   );
 };
