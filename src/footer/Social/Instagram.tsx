@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { AppConfig } from '../../utils/AppConfig';
 
-export const Instagram = ({ url = `${AppConfig.strava}` }): JSX.Element => {
+export const Instagram = ({ url = `${AppConfig.instagram}` }): JSX.Element => {
   return (
     <Link href={url} aria-label="Follow us on Strava">
       <a>
