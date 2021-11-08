@@ -7,7 +7,11 @@ import { Section } from '../layout/Section';
 import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 import { Logo } from './Logo';
 
-const Hero = () => {
+type Props = {
+  Home: boolean;
+};
+
+const Hero = (props: Props) => {
   const router = useRouter();
 
   return (
@@ -16,8 +20,8 @@ const Hero = () => {
         <Section yPadding="py-6">
           <NavbarTwoColumns logo={<Logo xs />}>
             <li>
-              <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
-                <a>À propos</a>
+              <Link href="/team">
+                <a>Équipe</a>
               </Link>
             </li>
             <li>
@@ -27,28 +31,29 @@ const Hero = () => {
             </li>
           </NavbarTwoColumns>
         </Section>
-
-        <Section yPadding="pt-20 pb-32">
-          <HeroOneButton
-            title={
-              <>
+        {props.Home && (
+          <Section yPadding="pt-20 pb-32">
+            <HeroOneButton
+              title={
+                <>
+                  <img
+                    className="primary"
+                    src={`${router.basePath}/assets/images/logo-apex.svg`}
+                    alt="Eurosports"
+                  />
+                  <h6 className="text-gray-1000">présenté par</h6>
+                </>
+              }
+              button={
                 <img
-                  className="primary"
-                  src={`${router.basePath}/assets/images/logo-apex.svg`}
+                  className="secondary"
+                  src={`${router.basePath}/assets/images/eurosports.svg`}
                   alt="Eurosports"
                 />
-                <h6 className="text-gray-1000">présenté par</h6>
-              </>
-            }
-            button={
-              <img
-                className="secondary"
-                src={`${router.basePath}/assets/images/eurosports.svg`}
-                alt="Eurosports"
-              />
-            }
-          />
-        </Section>
+              }
+            />
+          </Section>
+        )}
       </Background>
       <style jsx>
         {`
