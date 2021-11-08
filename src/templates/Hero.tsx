@@ -12,7 +12,7 @@ const Hero = () => {
 
   return (
     <>
-      <Background color="bg-gray-100">
+      <Background color="bg-gray-300">
         <Section yPadding="py-6">
           <NavbarTwoColumns logo={<Logo xs />}>
             <li>
@@ -37,7 +37,7 @@ const Hero = () => {
                   src={`${router.basePath}/assets/images/logo-apex.svg`}
                   alt="Eurosports"
                 />
-                <h6 className="text-primary-100">présenté par</h6>
+                <h6 className="text-gray-1000">présenté par</h6>
               </>
             }
             button={
@@ -59,7 +59,7 @@ const Hero = () => {
           @media screen and (max-width: 600px) {
             img.primary {
               height: 60px;
-              margin: auto;
+              margin: 2rem auto;
             }
           }
 

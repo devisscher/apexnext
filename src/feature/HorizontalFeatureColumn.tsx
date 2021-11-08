@@ -7,6 +7,7 @@ type IVerticalFeatureRowProps = {
   image: string;
   imageAlt: string;
   reverse?: boolean;
+  link: string;
 };
 
 const HorizontalFeatureColumn = (props: IVerticalFeatureRowProps) => {
@@ -26,7 +27,9 @@ const HorizontalFeatureColumn = (props: IVerticalFeatureRowProps) => {
   return (
     <div className={horizontalFeatureClass}>
       <div className="w-full p-6">
-        <img src={`${router.basePath}${props.image}`} alt={props.imageAlt} />
+        <a href={props.link}>
+          <img src={`${router.basePath}${props.image}`} alt={props.imageAlt} />
+        </a>
       </div>
       <div className="">{props.description}</div>
     </div>
