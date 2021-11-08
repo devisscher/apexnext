@@ -8,7 +8,7 @@ import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 import { Logo } from './Logo';
 
 type Props = {
-  Home: boolean;
+  home?: boolean;
 };
 
 const Hero = (props: Props) => {
@@ -31,7 +31,7 @@ const Hero = (props: Props) => {
             </li>
           </NavbarTwoColumns>
         </Section>
-        {props.Home && (
+        {props.home && (
           <Section yPadding="pt-20 pb-32">
             <HeroOneButton
               title={
