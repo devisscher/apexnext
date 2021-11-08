@@ -8,7 +8,7 @@ export default function TeamMate() {
           <div className="h-32 w-32">
             <img
               src="https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif"
-              alt
+              alt="teammate"
               className="rounded-full object-cover h-full w-full shadow-md"
             />
           </div>
@@ -43,7 +43,7 @@ export default function TeamMate() {
                 </svg>
               </div>
             </a>
-            <a href="javascript:void(0)" className="mx-5">
+            <a href="#" className="mx-5">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ export default function TeamMate() {
                 </svg>
               </div>
             </a>
-            <a href="javascript:void(0)" className="mx-5">
+            <a href="#" className="mx-5">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
